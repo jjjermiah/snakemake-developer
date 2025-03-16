@@ -14,7 +14,7 @@ git submodule update --remote --merge
 echo "[UPDATE] Submodules updated."
 
 echo "[UPDATE] Updating Pixi dependencies..."
-pixi update
+pixi install --all 
 echo "[UPDATE] Pixi dependencies updated."
 
 echo "[UPDATE] Updates complete."
