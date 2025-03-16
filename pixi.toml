@@ -10,7 +10,7 @@ setup = "./scripts/setup.sh"
 add-upstream = "./scripts/add-upstream.sh"
 
 [environments]
-dev = { features = ["test"] }
+dev = { features = ["test", "dev"] }
 
 [dependencies]
 python = ">=3.12,<3.13"
@@ -36,3 +36,6 @@ snakemake-storage-plugin-http = { git = "https://github.com/snakemake/snakemake-
 
 [feature.test.tasks.test]
 cmd = "./scripts/test.sh"
+
+[feature.dev.dependencies]
+mypy = "*"
