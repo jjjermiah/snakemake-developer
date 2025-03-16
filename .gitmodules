@@ -1,0 +1,34 @@
+[submodule "repos/snakemake"]
+	path = repos/snakemake
+	url = https://github.com/snakemake/snakemake.git
+	branch = main
+
+[submodule "repos/snakemake-interface-common"]
+	path = repos/snakemake-interface-common
+	url = https://github.com/snakemake/snakemake-interface-common.git
+	branch = main
+
+[submodule "repos/snakemake-interface-executor-plugins"]
+	path = repos/snakemake-interface-executor-plugins
+	url = https://github.com/snakemake/snakemake-interface-executor-plugins.git
+	branch = main
+
+[submodule "repos/snakemake-interface-logger-plugins"]
+	path = repos/snakemake-interface-logger-plugins
+	url = https://github.com/snakemake/snakemake-interface-logger-plugins.git
+	branch = main
+
+[submodule "repos/snakemake-interface-storage-plugins"]
+	path = repos/snakemake-interface-storage-plugins
+	url = https://github.com/snakemake/snakemake-interface-storage-plugins.git
+	branch = main
+
+[submodule "repos/snakemake-interface-software-deployment-plugins"]
+	path = repos/snakemake-interface-software-deployment-plugins
+	url = https://github.com/snakemake/snakemake-interface-software-deployment-plugins.git
+	branch = main
+
+[submodule "repos/snakemake-interface-report-plugins"]
+	path = repos/snakemake-interface-report-plugins
+	url = https://github.com/snakemake/snakemake-interface-report-plugins.git
+	branch = main
