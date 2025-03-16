@@ -32,3 +32,11 @@
 	path = repos/snakemake-interface-report-plugins
 	url = https://github.com/snakemake/snakemake-interface-report-plugins.git
 	branch = main
+[submodule "repos/snakemake-storage-plugin-gcs"]
+	path = repos/snakemake-storage-plugin-gcs
+	url = https://github.com/snakemake/snakemake-storage-plugin-gcs.git
+	branch = main
+[submodule "repos/snakemake-storage-plugin-http"]
+	path = repos/snakemake-storage-plugin-http
+	url = https://github.com/snakemake/snakemake-storage-plugin-http.git
+	branch = main
