@@ -2,7 +2,7 @@
 authors = ["Jermiah Joseph <jermiahjoseph98@gmail.com>"]
 channels = ["conda-forge", "bioconda"]
 name = "snakemake-developer"
-platforms = ["osx-arm64", "osx-64", "linux-64", "win-64"]
+platforms = ["osx-arm64", "linux-64"]
 version = "0.1.0"
 
 [tasks]
@@ -10,3 +10,13 @@ setup = "./scripts/setup.sh"
 add-upstream = "./scripts/add-upstream.sh"
 
 [dependencies]
+python = ">=3.12,<3.13"
+
+[pypi-dependencies]
+snakemake = { path = "repos/snakemake", extras = ["all"], editable = true }
+snakemake-interface-common = { path = "repos/snakemake-interface-common", editable = true }
+snakemake-interface-executor-plugins = { path = "repos/snakemake-interface-executor-plugins", editable = true }
+snakemake-interface-logger-plugins = { path = "repos/snakemake-interface-logger-plugins", editable = true }
+snakemake-interface-report-plugins = { path = "repos/snakemake-interface-report-plugins", editable = true }
+snakemake-interface-software-deployment-plugins = { path = "repos/snakemake-interface-software-deployment-plugins", editable = true }
+snakemake-interface-storage-plugins = { path = "repos/snakemake-interface-storage-plugins", editable = true }
