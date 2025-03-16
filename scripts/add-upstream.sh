@@ -126,3 +126,11 @@ for repo in repos/*; do
 done
 
 echo "[UPSTREAM] Upstream remotes added. Run 'git remote -v' inside each repo to verify."
+
+echo "[CONFIG] Enforcing Git settings for all submodules..."
+
+git submodule foreach --recursive git config --local remote.pushDefault upstream
+git submodule foreach --recursive git config --local branch.autoSetupMerge always
+git submodule foreach --recursive git remote set-url --push origin no_push
+
+echo "[CONFIG] Git settings applied to all submodules."
