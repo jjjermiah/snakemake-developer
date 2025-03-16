@@ -12,7 +12,7 @@ root_manifest=$(realpath $PWD/pixi.toml)
 echo "[TEST] Root manifest: $root_manifest"
 
 # gathering list of files to test 
-test_files=$(find repos -name tests.py -not -path 'repos/snakemake/*')
+test_files=$(find repos -path '*/tests/tests.py' -not -path 'repos/snakemake/*')
 if [ -z "$test_files" ]; then
 	echo "[TEST] No tests found."
 	exit 0
@@ -23,15 +23,18 @@ fi
 
 mkdir -p test_links
 
-# cop  all test files to a single directory
+# create hard links for all test files in a single directory
 for test_file in $test_files; do
 	repo_name=$(basename $(dirname $(dirname $test_file)))
 	# since they all have the same name, we need to rename them
 	new_file="test_links/test_$repo_name.py"
-	cp $test_file $new_file
+	if [ ! -f "$new_file" ]; then
+		ln "$test_file" "$new_file"
+	fi
 done
 
 all_repos=$(find repos -maxdepth 1 -type d -not -path 'repos/snakemake')
+
 # run tests
 pixi run \
 	--manifest-path "$root_manifest" \
