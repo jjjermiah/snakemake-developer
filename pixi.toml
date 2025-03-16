@@ -26,6 +26,7 @@ snakemake-interface-storage-plugins = { path = "repos/snakemake-interface-storag
 
 [feature.test.dependencies]
 pytest = ">=8.3.5,<9"
+coverage = ">=7.6.12,<8"
 
 [feature.test.pypi-dependencies]
 # these plugins are required in the respective interfaces' test suite

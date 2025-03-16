@@ -31,10 +31,23 @@ for test_file in $test_files; do
 	cp $test_file $new_file
 done
 
+all_repos=$(find repos -maxdepth 1 -type d -not -path 'repos/snakemake')
 # run tests
 pixi run \
 	--manifest-path "$root_manifest" \
-	pytest test_links/*.py
+	--environment dev \
+	coverage run \
+	--source=$(echo $all_repos | tr ' ' ',') \
+	--append \
+	-m pytest \
+	test_links/*.py
+
+
+
+pixi run \
+	--manifest-path "$root_manifest" \
+	coverage report \
+	--omit="test_links/*,repos/snakemake/*"
 
 
 
