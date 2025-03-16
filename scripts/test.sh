@@ -43,7 +43,8 @@ pixi run \
 	--source=$(echo $all_repos | tr ' ' ',') \
 	--append \
 	-m pytest \
-	test_links/*.py
+	test_links/*.py \
+	--last-failed --showlocals -s -vv
 
 
 

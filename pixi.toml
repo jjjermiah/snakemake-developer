@@ -24,6 +24,9 @@ snakemake-interface-report-plugins = { path = "repos/snakemake-interface-report-
 snakemake-interface-software-deployment-plugins = { path = "repos/snakemake-interface-software-deployment-plugins", editable = true }
 snakemake-interface-storage-plugins = { path = "repos/snakemake-interface-storage-plugins", editable = true }
 
+snakemake-storage-plugin-gcs = { path = "repos/snakemake-storage-plugin-gcs", editable = true }
+snakemake-storage-plugin-http = { path = "repos/snakemake-storage-plugin-http", editable = true }
+
 [feature.test.dependencies]
 pytest = ">=8.3.5,<9"
 coverage = ">=7.6.12,<8"
@@ -32,10 +35,15 @@ coverage = ">=7.6.12,<8"
 # these plugins are required in the respective interfaces' test suite
 snakemake-executor-plugin-cluster-generic = { git = "https://github.com/snakemake/snakemake-executor-plugin-cluster-generic.git" }
 snakemake-software-deployment-plugin-envmodules = { git = "https://github.com/snakemake/snakemake-software-deployment-plugin-envmodules.git" }
-snakemake-storage-plugin-http = { git = "https://github.com/snakemake/snakemake-storage-plugin-http.git" }
+# snakemake-storage-plugin-http = { git = "https://github.com/snakemake/snakemake-storage-plugin-http.git" }
 
 [feature.test.tasks.test]
 cmd = "./scripts/test.sh"
 
 [feature.dev.dependencies]
 mypy = "*"
+
+[feature.dev.pypi-dependencies]
+
+[feature.dev.tasks]
+type-check = "mypy"
