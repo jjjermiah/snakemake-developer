@@ -1948,11 +1948,11 @@ packages:
 - pypi: repos/snakemake-interface-software-deployment-plugins
   name: snakemake-interface-software-deployment-plugins
   version: 0.6.1
-  sha256: f7ff150513107caca052f49182f08a88607c9d8195127313343e51f8731c4bd2
+  sha256: 43da26b301c3aa57f1f3dd4875e56590d187dc8e88b05b24c0bb98b9f748d480
   requires_dist:
-  - argparse-dataclass>=2.0.0,<3.0.0
-  - snakemake-interface-common>=1.17.4,<2.0.0
-  requires_python: '>=3.11,<4.0'
+  - argparse-dataclass>=2.0.0
+  - snakemake-interface-common>=1.17.4
+  requires_python: '>=3.11'
   editable: true
 - pypi: repos/snakemake-interface-storage-plugins
   name: snakemake-interface-storage-plugins
