@@ -42,6 +42,7 @@ cmd = "./scripts/test.sh"
 
 [feature.dev.dependencies]
 mypy = "*"
+types-requests = ">=2.32.0.20250306,<3"
 
 [feature.dev.pypi-dependencies]
 
